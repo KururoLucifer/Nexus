@@ -14,6 +14,20 @@
       height: 100vh;
     }
 
+    #login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+
+    #chat-container {
+      display: none;
+      flex-direction: column;
+      height: 100vh;
+    }
+
     header {
       background: #23272a;
       padding: 10px 20px;
@@ -43,10 +57,14 @@
     }
 
     input[type="text"] {
-      flex: 1;
       padding: 10px;
       border: none;
       border-radius: 5px;
+      margin: 5px;
+    }
+
+    #message-input {
+      flex: 1;
       margin-right: 10px;
     }
 
@@ -62,26 +80,7 @@
 </head>
 <body>
 
-  <header>
-    <span id="user-name-display">Ton pseudo</span>
-  </header>
-
-  <div id="chat-box"></div>
-
-  <footer>
-    <input type="text" id="message-input" placeholder="Tape ton message..." />
-    <button onclick="sendMessage()">Envoyer</button>
-  </footer>
-
-  <script>
-    let pseudo = localStorage.getItem('pseudo');
-
-    if (!pseudo) {
-      pseudo = prompt("Entre ton pseudo :");
-      if (!pseudo) {
-        pseudo = "Anonyme";
-      }
-      localStorage.setItem('pseudo', pseudo);
-    }
-
-    document.getElementById('user-name-display').innerText = "Connecté en tant que : " + pseudo;
+  <!-- Écran de connexion -->
+  <div id="login">
+    <h2>Entre ton pseudo pour rejoindre le chat</h2>
+    <input type="text" id="pseudo-input" placeholder="Ton pseud
