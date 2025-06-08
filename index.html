@@ -1,86 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Mini Chat</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio de Thomas</title>
   <style>
     body {
-      font-family: sans-serif;
-      background: #2c2f33;
-      color: white;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f4f4;
+      color: #333;
     }
-
-    #login {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex: 1;
-    }
-
-    #chat-container {
-      display: none;
-      flex-direction: column;
-      height: 100vh;
-    }
-
     header {
-      background: #23272a;
-      padding: 10px 20px;
-      text-align: center;
-      font-size: 18px;
-    }
-
-    #chat-box {
-      flex: 1;
-      padding: 20px;
-      overflow-y: auto;
-      background: #36393f;
-    }
-
-    .message {
-      margin-bottom: 10px;
-    }
-
-    .message strong {
-      color: #7289da;
-    }
-
-    footer {
-      display: flex;
-      padding: 10px;
-      background: #23272a;
-    }
-
-    input[type="text"] {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      margin: 5px;
-    }
-
-    #message-input {
-      flex: 1;
-      margin-right: 10px;
-    }
-
-    button {
-      padding: 10px 15px;
-      background: #7289da;
-      border: none;
-      border-radius: 5px;
+      background: #282c34;
       color: white;
-      cursor: pointer;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #61dafb;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1.5rem 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      margin-top: 0;
+      color: #282c34;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .project {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem;
+      background: #fafafa;
+      transition: box-shadow 0.3s ease;
+    }
+    .project:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .project a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #282c34;
+      color: white;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+    @media(max-width: 480px){
+      header img {
+        width: 90px;
+        height: 90px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Écran de connexion -->
-  <div id="login">
-    <h2>Entre ton pseudo pour rejoindre le chat</h2>
-    <input type="text" id="pseudo-input" placeholder="Ton pseud
+<header>
+  <img src="https://via.placeholder.com/120" alt="Photo de Thomas" />
+  <h1>Thomas Jny</h1>
+  <p>Développeur web & créatif</p>
+</header>
+
+<section id="about">
+  <h2>À propos de moi</h2>
+  <p>Salut ! Je suis Thomas, passionné par le développement web et le design. J’aime créer des projets simples, fonctionnels et esthétiques.</p>
+</section>
+
+<section id="projects">
+  <h2>Mes projets</h2>
+  <div class="projects">
+    <div class="project">
+      <a href="https://github.com/thomasjny2323/mon-projet1" target="_blank" rel="noopener noreferrer">Projet 1 : Site vitrine</a>
+      <p>Un site simple en HTML/CSS pour présenter une entreprise.</p>
+    </div>
+    <div class="project">
+      <a href="https://github.com/thomasjny2323/mon-projet2" target="_blank" rel="noopener noreferrer">Projet 2 : Application JS</a>
+      <p>Une petite app JavaScript interactive.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Tu peux me joindre par email : <a href="mailto:thomas@example.com">thomas@example.com</a></p>
+</section>
+
+<footer>
+  © 2025 Thomas Jny - Portfolio
+</footer>
+
+</body>
+</html>
