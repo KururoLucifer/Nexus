@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Chat</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #2c2f33;
+      color: white;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    header {
+      background: #23272a;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    #chat-box {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background: #36393f;
+    }
+
+    .message {
+      margin-bottom: 10px;
+    }
+
+    .message strong {
+      color: #7289da;
+    }
+
+    footer {
+      display: flex;
+      padding: 10px;
+      background: #23272a;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background: #7289da;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span id="user-name-display">Ton pseudo</span>
+  </header>
+
+  <div id="chat-box"></div>
+
+  <footer>
+    <input type="text" id="message-input" placeholder="Tape ton message..."
