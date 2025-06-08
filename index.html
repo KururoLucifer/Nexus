@@ -69,4 +69,19 @@
   <div id="chat-box"></div>
 
   <footer>
-    <input type="text" id="message-input" placeholder="Tape ton message..."
+    <input type="text" id="message-input" placeholder="Tape ton message..." />
+    <button onclick="sendMessage()">Envoyer</button>
+  </footer>
+
+  <script>
+    let pseudo = localStorage.getItem('pseudo');
+
+    if (!pseudo) {
+      pseudo = prompt("Entre ton pseudo :");
+      if (!pseudo) {
+        pseudo = "Anonyme";
+      }
+      localStorage.setItem('pseudo', pseudo);
+    }
+
+    document.getElementById('user-name-display').innerText = "Connecté en tant que : " + pseudo;
